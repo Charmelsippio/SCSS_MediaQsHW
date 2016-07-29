@@ -1,0 +1,219 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway|Roboto';
+
+// @mixin resize ($screen) {
+//   @if $screen == tablet {
+//       @media(max-width: 770px);
+//   } @else if $screen == iphone {
+//       @media(max-width: 415px);
+//   }
+// } I was trying to figure out how to call everything listed below as an if statement mixin, but couldn't figure it out in time. 
+
+$color: MidnightBlue;
+
+$break-tablet: 770px; //resonsive for ipad
+
+$break-iphone: 415px; //respnsive for iphone 6 not 6plus
+
+@mixin media_breakA {
+  @media screen and (max-width: $break-tablet){@content}
+}
+
+@mixin media_breakB {
+    @media screen and (max-width: $break-iphone){@content}
+}
+
+@mixin div_style {
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px;
+  // border: solid 1px grey;
+  box-shadow: inset 0 0 20px grey;
+    p {
+      font-family: "Roboto"
+    }
+}  
+
+@mixin gallery_style {
+  float: left;
+  padding-left: 40px;
+  padding-top: 75px;
+}
+
+body {
+  margin: 0 auto;
+  background-image: url("../Tina_render.png"), url("../Tina_upsidedown.png"); //multiple background images next to each other. <source: https://www.w3.org/TR/css3-background/#backgrounds>
+  background-position: top left, center; 
+  background-size: 80px 110px;
+  width: auto;
+  height: 90vh;
+
+  @include media_breakA {
+    background-image: url("../Tina_upsidedown.png");
+  }
+
+  @include media_breakB {
+    background-image: url("../Tina_render.png");
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    font-family: "Raleway";
+    font-size: 40px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 10px 20px grey;
+    background-color: Tomato;
+  }
+
+    li {
+      float: right;
+      display: inline-block;
+      // padding-left: 10px;
+      margin: 0px 10px;
+      color: $color;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+  }
+}
+
+
+h2 {
+  font-family: "Raleway";
+  color: $color;
+}
+
+
+#tinaBanner {
+  float: left;
+  margin-left: 135px;
+  margin-top: 80px;
+
+  @include media_breakA {
+    width: 80%;
+    float: none;
+    margin-left: 90px;
+  }
+
+  @include media_breakB {
+    width: 90%;
+    margin-left: 20px;
+    float: none;
+  }
+}
+
+
+#sec1 {
+  @include div_style;
+
+  float: right;
+  margin-top: 130px;
+  margin-right: 60px;
+
+  @include media_breakA {
+    float: none;
+    margin-left: 142px;
+  }
+  
+  @include media_breakB {
+    float: none;
+    margin-left: 60px;
+  }
+}
+
+
+#floating_head {
+  width: 26%;
+  float: left;
+  margin-top: 90px;
+  margin-left: 35px;
+
+  @include media_breakA {
+    float: none;
+    width: auto;
+    margin-left: 225px;
+  }
+  
+  @include media_breakB {
+    float: none;
+    width: auto;
+    margin-left: 20px;
+  }
+}
+
+
+#sec2 {
+  @extend #sec1;
+  clear: left;
+  float: left;
+  margin-left: 50px;
+
+  @include media_breakA {
+    float: none;
+    margin-left: 142px;
+  }
+  
+  @include media_breakB {
+    float: none;
+    margin-left: 60px;
+  }
+}
+
+
+#gif {
+  float: right;
+  margin-right: -105px;
+  margin-top: -250px;
+  display: inline-block;
+
+  @include media_breakA {
+    float: none;
+    width: auto;
+    margin-left: 133px;
+    margin-top: 80px;
+  }
+  
+  @include media_breakB {
+    float: none;
+    margin-top: 30px;
+    margin-left: 35px;
+  }
+}
+
+#tinaGallery {
+  @include gallery_style;
+  width: auto;
+  height: auto;
+
+  @include media_breakA {
+    float: none;
+    width: auto;
+    margin-left: 133px;
+    margin-top: 30px;
+  }
+  
+  @include media_breakB {
+    float: none;
+    margin-top: 30px;
+    margin-left: -25px;
+  }
+}
+
+#gif2 {
+  @include gallery_style;
+  padding-left: 495px;
+}
+
+

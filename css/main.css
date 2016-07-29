@@ -1,0 +1,147 @@
+@import "https://fonts.googleapis.com/css?family=Raleway|Roboto";
+body {
+  margin: 0 auto;
+  background-image: url("../Tina_render.png"), url("../Tina_upsidedown.png");
+  background-position: top left, center;
+  background-size: 80px 110px;
+  width: auto;
+  height: 90vh; }
+  @media screen and (max-width: 770px) {
+    body {
+      background-image: url("../Tina_upsidedown.png"); } }
+  @media screen and (max-width: 415px) {
+    body {
+      background-image: url("../Tina_render.png"); } }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  font-family: "Raleway";
+  font-size: 40px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 20px grey;
+  background-color: Tomato; }
+nav li {
+  float: right;
+  display: inline-block;
+  margin: 0px 10px;
+  color: MidnightBlue; }
+nav a {
+  text-decoration: none; }
+  nav a:hover {
+    text-decoration: underline; }
+
+h2 {
+  font-family: "Raleway";
+  color: MidnightBlue; }
+
+#tinaBanner {
+  float: left;
+  margin-left: 135px;
+  margin-top: 80px; }
+  @media screen and (max-width: 770px) {
+    #tinaBanner {
+      width: 80%;
+      float: none;
+      margin-left: 90px; } }
+  @media screen and (max-width: 415px) {
+    #tinaBanner {
+      width: 90%;
+      margin-left: 20px;
+      float: none; } }
+
+#sec1, #sec2 {
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px;
+  box-shadow: inset 0 0 20px grey;
+  float: right;
+  margin-top: 130px;
+  margin-right: 60px; }
+  #sec1 p, #sec2 p {
+    font-family: "Roboto"; }
+  @media screen and (max-width: 770px) {
+    #sec1, #sec2 {
+      float: none;
+      margin-left: 142px; } }
+  @media screen and (max-width: 415px) {
+    #sec1, #sec2 {
+      float: none;
+      margin-left: 60px; } }
+
+#floating_head {
+  width: 26%;
+  float: left;
+  margin-top: 90px;
+  margin-left: 35px; }
+  @media screen and (max-width: 770px) {
+    #floating_head {
+      float: none;
+      width: auto;
+      margin-left: 225px; } }
+  @media screen and (max-width: 415px) {
+    #floating_head {
+      float: none;
+      width: auto;
+      margin-left: 20px; } }
+
+#sec2 {
+  clear: left;
+  float: left;
+  margin-left: 50px; }
+  @media screen and (max-width: 770px) {
+    #sec2 {
+      float: none;
+      margin-left: 142px; } }
+  @media screen and (max-width: 415px) {
+    #sec2 {
+      float: none;
+      margin-left: 60px; } }
+
+#gif {
+  float: right;
+  margin-right: -105px;
+  margin-top: -250px;
+  display: inline-block; }
+  @media screen and (max-width: 770px) {
+    #gif {
+      float: none;
+      width: auto;
+      margin-left: 133px;
+      margin-top: 80px; } }
+  @media screen and (max-width: 415px) {
+    #gif {
+      float: none;
+      margin-top: 30px;
+      margin-left: 35px; } }
+
+#tinaGallery {
+  float: left;
+  padding-left: 40px;
+  padding-top: 75px;
+  width: auto;
+  height: auto; }
+  @media screen and (max-width: 770px) {
+    #tinaGallery {
+      float: none;
+      width: auto;
+      margin-left: 133px;
+      margin-top: 30px; } }
+  @media screen and (max-width: 415px) {
+    #tinaGallery {
+      float: none;
+      margin-top: 30px;
+      margin-left: -25px; } }
+
+#gif2 {
+  float: left;
+  padding-left: 40px;
+  padding-top: 75px;
+  padding-left: 495px; }
+
+/*# sourceMappingURL=main.css.map */
