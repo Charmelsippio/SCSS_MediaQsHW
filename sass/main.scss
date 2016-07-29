@@ -10,9 +10,9 @@
 
 $color: MidnightBlue;
 
-$break-tablet: 770px; //resonsive for ipad
+$break-tablet: 770px; //responsive for ipad
 
-$break-iphone: 415px; //respnsive for iphone 6 not 6plus
+$break-iphone: 415px; //responsive for iphone 
 
 @mixin media_breakA {
   @media screen and (max-width: $break-tablet){@content}
@@ -28,7 +28,6 @@ $break-iphone: 415px; //respnsive for iphone 6 not 6plus
   border-radius: 10px;
   padding: 10px 20px;
   margin: 20px;
-  // border: solid 1px grey;
   box-shadow: inset 0 0 20px grey;
     p {
       font-family: "Roboto"
@@ -40,6 +39,8 @@ $break-iphone: 415px; //respnsive for iphone 6 not 6plus
   padding-left: 40px;
   padding-top: 75px;
 }
+
+//////////////////////////////// Styling /////////////////////////////////////////////////
 
 body {
   margin: 0 auto;
@@ -58,6 +59,7 @@ body {
   }
 }
 
+
 nav {
   ul {
     margin: 0;
@@ -72,20 +74,19 @@ nav {
     background-color: Tomato;
   }
 
-    li {
-      float: right;
-      display: inline-block;
-      // padding-left: 10px;
-      margin: 0px 10px;
-      color: $color;
+  li {
+    float: right;
+    display: inline-block;
+    margin: 0px 10px;
+    color: $color;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
   }
 }
 
